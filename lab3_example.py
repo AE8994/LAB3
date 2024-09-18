@@ -6,19 +6,19 @@
 #
 #   AUTHOR: Adrian Edmundson
 #   Written: 9/18/2024
-#   Version 1.0.0
+#   Version 1.1.0
 #
 ############################################################
 
 # Named Constants
 # Primary colors
-RED = 'red'
-YELLOW = 'yellow'
-BLUE = 'blue'
+RED = 'RED'
+YELLOW = 'YELLOW'
+BLUE = 'BLUE'
 # Secondary colors
-GREEN = 'green'
-PURPLE = 'purple'
-ORANGE = 'orange'
+GREEN = 'GREEN'
+PURPLE = 'PURPLE'
+ORANGE = 'ORANGE'
 
 # Boolean Flag
 isValid = False
@@ -39,16 +39,16 @@ print(f'You enter {color2} for the second primary color.')
 if color1 == color2:
     print(f'\nYou entered {color1} and {color2}.')
     print('You entered the same color for the first and second color.')
-elif (color1.lower() == RED and color2.lower() == BLUE) or \
-   (color1.lower() == BLUE and color2.lower() == RED):
+elif (color1.upper() == RED and color2.upper() == BLUE) or \
+   (color1.upper() == BLUE and color2.upper() == RED):
     isValid = True  # valid colors, set the flag to True
     result = PURPLE
-elif (color1.lower() == RED and color2.lower() == YELLOW) or \
-   (color1.lower() == YELLOW and color2.lower() == RED):
+elif (color1.upper() == RED and color2.upper() == YELLOW) or \
+   (color1.upper() == YELLOW and color2.upper() == RED):
     isValid = True  # valid colors, set the flag to True
     result = ORANGE
-elif (color1.lower() == BLUE and color2.lower() == YELLOW) or \
-   (color1.lower() == YELLOW and color2.lower() == BLUE):
+elif (color1.upper() == BLUE and color2.upper() == YELLOW) or \
+   (color1.upper() == YELLOW and color2.upper() == BLUE):
     isValid = True  # valid colors, set the flag to True
     result = GREEN
 else:
